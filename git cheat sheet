@@ -1,0 +1,107 @@
+GIT OPERATIONS
+
+    git init                                       : turn current directory into a git repository
+
+                                                     sample use: git init
+
+
+    git clone [repository address]                 : get copy of repository from the address
+
+                                                     sample use: git clone https://github.com/udacity/asteroids.git
+
+
+    git checkout [-b] [commit id|branch name]      : switch to a commit given the commit id or to a bracnh giving the bracnh name.
+                                                     use "-b" to checkout and create a new branch in one command
+
+                                                     sample use: git checkout edfgfgf
+                                                                 git checkout app_v2
+                                                                 git checkout -b new_branch
+
+
+    git add [file_name|.]                          : add file or files using "." to staging area for commit 
+
+                                                     sample use: git add hello.txt
+                                                                 git add .   
+
+
+    git reset [file_name]                          : remove file from staging area 
+
+                                                     sample use: git reset hello.txt 
+
+
+    git diff [''|--staged|commit_a_id commit_b_id] : Compare and show differences between working repo and staging area,
+                                                     staging area and repository, and two commits 
+
+                                                     sample use: git diff
+                                                                 git diff -- staged
+                                                                 git diff edfg drfe
+                                                                 
+
+    git commit [-m "commit msg"]                   : Commit changes to the repository from the staging area.
+                                                     if an editor was configured with git, it should open up for entry of commit message
+                                                     else use [-m] followed by commit message
+
+                                                     sample use: git commit
+                                                                 git commit -m "hello, my initial commit here" 
+
+
+    git branch [-d] [''|branch name]               : Show list of branches or create a new branch from the active commit
+                                                     when giving a branch nmae as argument. use "-d" to delete
+                                                          
+
+                                                     sample use: git branch
+                                                                 git branch app_v2
+                                                                 git branch -d app_v2
+                                                     
+
+    git merge [target_branchs] [--abort]            : merge a branch(s) into a  checked out branch, or cancel merge using "--abort"
+                                                
+                                                      sample use: git merge master coins
+                                                                  git merge abort
+
+
+    git status                                    : gives information on the current state of the repository, active branch, 
+                                                    active commit, file tracking status
+
+                                                    sample use: git status
+
+
+    git show  [commit_id]                          : show the diff between a commit and its parent commit  
+
+                                                     sample use: git show edf6fh
+
+
+    git log [--graph, --oneline]                  : get log of commits done on the repository
+
+                                                    sample use: git log
+                                                                git log --graph
+                                                                git log --graph --oneline
+
+
+    git gc                                        :  clean commits without access to any branch
+
+                                                     sample use: git gc
+
+
+
+
+CONFIGURATIONS
+
+    git config --global color.ui auto : set syntax coloring for readability
+
+
+
+STYLE GUIDE
+
+    type [feat|fix|doc|style|chore|refactor|test]: Subject(describe "what" using imperative tone)
+        feat: A new feature
+        fix: A bug fix
+        docs: Changes to documentation
+        style: Formatting, missing semi colons, etc; no code change
+        refactor: Refactoring production code
+        test: Adding tests, refactoring test; no production code change
+        chore: Updating build tasks, package manager configs, etc; no production code change
+
+    body: explains what and why not how
+
+    footer: to reference issue trackers
