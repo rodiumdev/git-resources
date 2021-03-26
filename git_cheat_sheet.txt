@@ -78,9 +78,23 @@ GIT OPERATIONS
                                                                 git log --graph --oneline
 
 
-    git gc                                        :  clean commits without access to any branch
+    git gc                                        : clean commits without access to any branch
 
-                                                     sample use: git gc
+                                                    sample use: git gc
+
+REMOTE
+
+    git remote [''|-v|add remote_name remote_src] : Show list of remote or create a new remote from the active commit
+                                                    when giving a remote name and src as arguments. use "-v" to verify remote
+                                                          
+                                                    sample use: git remote
+                                                                git remote add origin git@hub:app_names
+                                                                git remote -v    
+
+
+    git push [remote branch]                      : move (push) commits on reachable by branch onto remote
+                                                          
+                                                    sample use: git push origin main
 
 
 
