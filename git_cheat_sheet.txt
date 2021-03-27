@@ -97,6 +97,11 @@ REMOTE
                                                     sample use: git push origin main
 
 
+    git pull [remote branch]                      : move (pull) commits on to branch from remote repository
+                                                          
+                                                    sample use: git pull origin main
+
+
 
 
 CONFIGURATIONS
