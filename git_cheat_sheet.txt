@@ -105,8 +105,14 @@ REMOTE
 
 
 CONFIGURATIONS
+    generate ssh key and link to git:
+        ssh-keygen -t ed25519 -C "your_email@example.com" &&
+        eval `ssh-agent -s` &&
+        ssh-add ~/.ssh/id_ed25519 &&
+        clip < ~/.ssh/id_ed25519.pub &&
 
-    git config --global color.ui auto : set syntax coloring for readability
+    set syntax coloring for readability:
+        git config --global color.ui auto
 
 
 
